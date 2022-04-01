@@ -7,7 +7,10 @@ app.get('', (req, res) => {
 });
 
 app.get('/help', (req, res) => {
-  res.send('help page');
+  res.send([{
+    name: 'Ashirvad',
+    age: 31,
+  }]);
 });
 
 app.get('/about', (req, res) => {
@@ -15,7 +18,10 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
-  res.send('howz the weather?');
+  res.send({
+    forecast: `It's cloudy`,
+    location: 'bangalore',
+  });
 });
 
 app.listen(3000, () => {
